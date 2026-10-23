@@ -1,0 +1,65 @@
+{
+  "model": "class-weighted logistic regression",
+  "threshold": 0.5,
+  "features": [
+    "step",
+    "amount",
+    "oldbalanceOrg",
+    "newbalanceOrig",
+    "oldbalanceDest",
+    "newbalanceDest",
+    "type"
+  ],
+  "random_state": 42,
+  "training_dataset": "data\\processed\\fraud_sampled.csv",
+  "training_rows": 172473,
+  "training_class_counts": {
+    "0": 164260,
+    "1": 8213
+  },
+  "evaluation": {
+    "method": "stratified 80/20 holdout from fraud_sampled.csv",
+    "rows": 34495,
+    "class_counts": {
+      "0": 32852,
+      "1": 1643
+    },
+    "metrics": {
+      "accuracy": 0.9461371213219307,
+      "precision": 0.4672156145166209,
+      "recall": 0.9324406573341448,
+      "f1": 0.6225111743193824,
+      "roc_auc": 0.9880583970945814,
+      "average_precision": 0.8897004266304287,
+      "confusion_matrix": [
+        [
+          31105,
+          1747
+        ],
+        [
+          111,
+          1532
+        ]
+      ]
+    },
+    "caveat": "The holdout preserves the downsampled training sample's class prevalence; precision and average precision are not estimates at the raw dataset's fraud rate."
+  },
+  "full_dataset": {
+    "rows": 6362620,
+    "target": "isFraud",
+    "class_counts": {
+      "0": 6354407,
+      "1": 8213
+    },
+    "fraud_rate": 0.001290820448180152,
+    "transaction_type_counts": {
+      "PAYMENT": 2151495,
+      "CASH_OUT": 2237500,
+      "CASH_IN": 1399284,
+      "TRANSFER": 532909,
+      "DEBIT": 41432
+    }
+  },
+  "created_at": "2026-10-23T10:47:06.506762+00:00",
+  "scikit_learn_version": "1.9.1"
+}
