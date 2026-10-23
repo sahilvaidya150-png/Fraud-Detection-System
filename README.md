@@ -60,4 +60,4 @@ The API exposes `/api/health`, `/api/predictions/`, `/api/transactions/`, `/api/
 
 ## Limitations
 
-The processed training sample is an intentionally downsampled cohort, not a production-representative evaluation set. Threshold-based predictions and metrics are for demonstration and should not be treated as production-ready risk decisions without a representative temporal validation, calibration, operational review, and monitoring data. The video playback could not be inspected in this environment; the interface follows the dark navy/cyan design direction in the supplied requirements.
+The processed training sample is an intentionally downsampled cohort, not a production-representative evaluation set. Threshold-based predictions and metrics are for demonstration and should not be treated as production-ready risk decisions without a representative temporal validation, calibration, operational review, and monitoring data. The video playback could not be inspected in this environment; the interface follows the dark navy/cyan design direction in the supplied requirements."# Fraud-Detection-System" 
